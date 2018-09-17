@@ -1,0 +1,13 @@
+{{each data as value i}}
+<li>
+  <a href="javascript:;">
+    <span>{{data.serviceIndex}}</span>
+    <img src="https://www.daoway.cn/pcimages/right.png" />
+  </a>
+  <ul>
+    {{each data.serviceType as item i}}
+    <li><a href="javascript:;">{{item}}</a></li>
+    {{/each}}
+  </ul>
+</li>
+{{/each}}

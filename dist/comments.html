@@ -1,0 +1,156 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Page Title</title><link rel="stylesheet" href="../dist/css/index.min.css"></head><body><header class="header"><div class="header_container"><div class="header_logo"><img src="https://www.daoway.cn/pcimages/logo.png"></div><div class="header_nav"><div class="current_city"><a href="javascript:;"><img src="https://www.daoway.cn/pcimages/citypoint.png"> <span>北京</span> <span>切换城市</span></a></div><ul class="header_navbar"><li><a href="index.html">首页</a></li><li><a href="javascript:;">到位APP</a></li><li><a href="facilitator.html">服务商</a></li><li><a href="javascript:;">商家入驻</a></li><li><a href="javascript:;">关于我们</a></li></ul><div class="login"><a href="javascript:;">商家登录</a></div></div></div></header><div class="comments_title"><div class="title_container"></div></div><div class="navtitle"><ul><li class="slibingsclor"><a href="javascript:;">服务项目</a></li><li><a href="javascript:;">商家简介</a></li><li><a href="javascript:;">用户评论</a></li></ul></div><div class="service_center"><div class="center_left"><div class="main_content"></div><div class="pageination"><ul><li class="btn">&lt;上一页</li><li class="pgNumber pgon">1</li><li class="pgNumber">2</li><li class="pgNumber">3</li><li class="pgNumber">4</li><li class="pgNumber">5</li><li class="pgNumber">6</li><li class="pgNumber">7</li><li class="pgNumber">8</li><li class="pgNumber">9</li><li class="ellipsis ellbehind">...</li><li class="btn pgDn">下一页&gt;</li></ul></div></div><div class="center_right"><div class="img_con"><div class="blank"></div><div class="code"><img src="https://www.daoway.cn/pcimages/daowayApp.png"></div></div></div></div><div class="service_promise"><h2>到位<span>服务</span>保障</h2><p>到位平台担保交易安全，交易未成功100%退款</p><div class="service_list"><ul><li><img src="https://www.daoway.cn/pcimages/anquan.jpg"> 优选服务</li><li><img src="https://www.daoway.cn/pcimages/anquan.jpg"> 优选服务</li><li><img src="https://www.daoway.cn/pcimages/anquan.jpg"> 优选服务</li></ul></div></div><footer class="footer"><dl><dt>热门城市</dt><dd><a href="javascript:;">北京</a> <a href="javascript:;">上海</a> <a href="javascript:;">广州</a> <a href="javascript:;">深圳</a> <a href="javascript:;">成都</a> <a href="javascript:;">天津</a> <a href="javascript:;">南京</a> <a href="javascript:;">杭州</a> <a href="javascript:;">重庆</a> <a href="javascript:;">苏州</a> <a href="javascript:;">武汉</a> <a href="javascript:;">长沙</a> <a href="javascript:;">济南</a> <a href="javascript:;">郑州</a> <a href="javascript:;">西安</a> <a href="javascript:;">沈阳</a> <a href="javascript:;">福州</a> <a href="javascript:;">厦门</a> <a href="javascript:;">南昌</a> <a href="javascript:;">合肥</a> <a href="javascript:;">宁波</a> <a href="javascript:;">无锡</a> <a href="javascript:;">青岛</a> <a href="javascript:;">大连</a></dd></dl></footer></body><script id="comments_title" type="text/html">{{each data as value i}}
+    <div class="title_left">
+      <span>{{value.name}}</span>
+      <span>营业时间：
+        <span>{{value.seredate}}</span>
+      </span>
+      <span>最近可预约时间：
+        <span>{{value.servedatalately}}</span>
+      </span>
+    </div>
+    <div class="title_right">
+      <ul>
+        <li>
+          <span>{{value.orderCount}}</span>
+          成功接单
+          <span>|</span>
+        </li>
+        <li>
+          <span>{{value.accept}}</span>
+          接单率
+          <span>|</span>
+        </li>
+        <li>
+          <span>{{value.praise}}</span>
+          好评率
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  {{/each}}</script><script id="item" type="text/html">{{each data as value i}}
+  <h3>
+    <span>服务项目</span>
+  </h3>
+  <div class="item_info">
+    <a href="javascript:;">
+      <img src={{value.imgUrl}} />
+      <div class="content">
+        <div class="title">{{value.title}}</div>
+        <div class='desc'>{{value.servedes}}</div>
+        <div class="price">
+          <span>
+            <span>{{value.price}}</span>
+            元/小时
+          </span>
+          <span>
+            原价
+            <span>{{value.oldPrice}}</span>
+          </span>
+        </div>
+      </div>
+      <div class="sold">
+        已售
+        <span>{{value.soldCount}}</span>
+      </div>
+    </a>
+  </div>
+  <div class="blank"></div>
+    <h3>
+      <span>商家简介</span>
+    </h3>
+    <div class="company">
+      上海家谐网络科技有限公司
+      <img src="https://www.daoway.cn/pcimages/renzheng.jpg" />
+    </div>
+    <p class="compang_info">
+      {{value.business}}
+    </p>
+    <div class="small_blank"></div>
+    <h3>
+        <span>用户评论</span>
+        <span>({{value.commentCount}}条评论)</span>
+    </h3>
+    <div class="commentsList" id="commentsList">
+        {{include 'comments' value}}
+    </div>
+  {{/each}}</script><script id="comments" type="text/html">{{each data as value i}}
+    <div class="comment">
+      <img src={{value.iconUrl}} />
+      <ul>
+        <li>{{value.nick}}</li>
+        <li>
+          <div class="star">
+            <img src="https://www.daoway.cn/pcimages/red_star.png" />
+            <img src="https://www.daoway.cn/pcimages/red_star.png" />
+            <img src="https://www.daoway.cn/pcimages/red_star.png" />
+            <img src="https://www.daoway.cn/pcimages/red_star.png" />
+            <img src="https://www.daoway.cn/pcimages/red_star.png" />
+          </div>
+          <div class="time">{{value.createtime | dateFormat :'yyyy-MM-dd h:m:s'}}</div>
+        </li>
+        <li>{{value.comment}}</li>
+        <li style="color:#898989">
+          <img src="https://www.daoway.cn/pcimages/position.jpg" />
+          {{value.city}}&nbsp;{{value.area}}
+        </li>
+      </ul>
+    </div>
+  {{/each}}</script><script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><script src="./js/template.js"></script><script>$.get('http://localhost:3000/item',(data)=>{
+    $('.title_container').append(template('comments_title',{data:data}))
+    $('.main_content').append(template('item',{data:data}))
+  })
+  let comments = [];
+  let currentComments = [];
+  $.get('http://localhost:3000/comment',(data)=>{
+    comments = data;
+    currentComments = data.slice(0,10);
+    $('.commentsList').append(template('comments',{data:currentComments}))
+    
+    $('.pgNumber').click(function(){
+    document.getElementById('commentsList').scrollIntoView()
+    let pageNum = this.textContent;
+    currentComments = comments.slice(pageNum*10-10,pageNum*10);
+
+    $('.commentsList').empty().append(template('comments',{data:currentComments}))
+    $(this).addClass('pgon').siblings().removeClass('pgon');
+      if(pageNum > 1 && pageNum < $('.pgNumber').length){
+        $('.btn:first').addClass('pgUp')
+        $('.btn:last').addClass('pgDn')
+      }else if(pageNum===1){
+        $('.btn:last').addClass('pgDn')
+        $('.btn:first').removeClass('pgUp')
+      }else if(pageNum === $('.pgNumber').length){
+        $('.btn:last').removeClass('pgDn')
+        $('.btn:first').addClass('pgUp')
+      }
+      
+    })
+  })
+  template.helper('dateFormat', function (date, format) {
+ 
+    date = new Date(date);
+
+    var map = {
+      "M": date.getMonth() + 1, //月份 
+      "d": date.getDate(), //日 
+      "h": date.getHours(), //小时 
+      "m": date.getMinutes(), //分 
+      "s": date.getSeconds(), //秒 
+      "q": Math.floor((date.getMonth() + 3) / 3), //季度 
+      "S": date.getMilliseconds() //毫秒 
+    };
+    format = format.replace(/([yMdhmsqS])+/g, function (all, t) {
+      var v = map[t];
+      if (v !== undefined) {
+        if (all.length > 1) {
+          v = '0' + v;
+          v = v.substr(v.length - 2);
+        }
+        return v;
+      } else if (t === 'y') {
+        return (date.getFullYear() + '').substr(4 - all.length);
+      }
+      return all;
+    });
+    return format;
+  });</script></html>
